@@ -1,0 +1,14 @@
+{
+  "model": "autotrust/AutoTrust-JEV-27B-v1.1",
+  "measured": "19 October 2026, MacBook Pro M5 Max (128 GB), mlx 0.32.3, mlx-vlm 0.7.6",
+  "prompt_set": "231 decisions from the JevBench public set, rendered with the model's own jev_format (scripts/jevbench_to_requests.py)",
+  "reference": "independent PyTorch reference (transformers 5.19, bf16 weights, fp32 attention, no mask in the 16 full-attention layers) on 39 of the 231 prompts; the original bf16 weights on MLX for all 231",
+  "bf16_mlx_vs_pytorch": {"same_top_answer": "39/39", "kl_mean": 0.0001, "kl_p95": 0.0008, "max_abs_prob_diff": 0.037},
+  "causal_control_vs_pytorch": {"same_top_answer": "34/39", "kl_mean": 0.088, "max_abs_prob_diff": 0.72, "note": "the same weights read causally, as a plain conversion would"},
+  "builds": {
+    "AutoTrust-JEV-27B-v1.1-mlx-8bit": {"size_gb": 28, "peak_memory_gb": 31.2, "same_top_answer_vs_bf16": "231/231", "kl_mean": 0.0002, "kl_p95": 0.0004, "same_top_answer_vs_pytorch": "39/39", "jevbench_public": "209/231", "median_ms": 318, "p95_ms": 335},
+    "AutoTrust-JEV-27B-v1.1-mlx-4bit": {"size_gb": 16, "peak_memory_gb": 18.4, "same_top_answer_vs_bf16": "227/231", "kl_mean": 0.0041, "kl_p95": 0.0186, "same_top_answer_vs_pytorch": "39/39", "jevbench_public": "210/231", "median_ms": 285, "p95_ms": 307}
+  },
+  "bf16_original_weights_jevbench_public": "209/231 (easy 48/48, standard 72/72, hard 89/111)",
+  "speed_note": "one decision at a time, 120 prompts (median 147 tokens), other models running on the same Mac; prompts of 3-4K tokens take 3.5-6 s; peak memory measured on the longest prompt (3,970 tokens)"
+}
