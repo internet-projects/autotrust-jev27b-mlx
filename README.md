@@ -1,4 +1,4 @@
-# jev27b-mlx
+# autotrust-jev27b-mlx
 
 [autotrust/AutoTrust-JEV-27B-v1.1](https://huggingface.co/autotrust/AutoTrust-JEV-27B-v1.1) on Apple Silicon with [MLX](https://github.com/ml-explore/mlx): one-pass decisions with calibrated option probabilities, read the way the model was trained, with bidirectional attention over the prompt.
 
@@ -24,7 +24,7 @@ The decision read-out rows in `lm_head` are kept at 8 bits in both builds. Pick 
 ## Install
 
 ```bash
-pip install "git+https://github.com/internet-projects/jev27b-mlx"
+pip install "git+https://github.com/internet-projects/autotrust-jev27b-mlx"
 ```
 
 Apple Silicon, Python 3.10+, `mlx`, `mlx-vlm` 0.7.6 or later and `transformers` (installed with the package).
@@ -95,7 +95,7 @@ The original folder also loads directly: `jev27b_mlx.load("<autotrust folder>")`
 
 ## More from NetProjects
 
-- [JEV-35B on MLX](https://github.com/internet-projects/jev35b-mlx), autotrust's mixture-of-experts decision model, with vision
+- [JEV-35B on MLX](https://github.com/internet-projects/autotrust-jev35b-mlx), autotrust's mixture-of-experts decision model, with vision
 - [H2O-Lightning-4B on MLX](https://github.com/internet-projects/h2o-lightning-mlx)
 - [NVIDIA Nemotron-Labs Dory 1.0 4B on MLX](https://github.com/internet-projects/dory-mlx)
 - [NetProjects on Hugging Face](https://huggingface.co/netprojects)

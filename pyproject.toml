@@ -13,7 +13,7 @@ authors = [{name = "Paris Michalas, NetProjects (Internet Projects Ltd)"}]
 dependencies = ["mlx>=0.32", "mlx-vlm>=0.7.6", "transformers>=5.17", "huggingface_hub", "numpy"]
 
 [project.urls]
-Homepage = "https://github.com/internet-projects/jev27b-mlx"
+Homepage = "https://github.com/internet-projects/autotrust-jev27b-mlx"
 Weights = "https://huggingface.co/netprojects"
 
 [tool.setuptools]
